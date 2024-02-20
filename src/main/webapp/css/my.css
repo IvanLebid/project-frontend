@@ -1,0 +1,57 @@
+table, td, th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.users-table{
+  background-color: aqua;
+}
+.users-table-body{
+  background-color: aquamarine;
+}
+.button-container{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 12px;
+  background-color: cadetblue;
+}
+.page-button{
+  margin: 4px 8px 8px 8px;
+}
+.active-page-button{
+  font-weight: bold;
+  color: red;
+}
+.creating-account-container{
+  padding: 4px;
+  box-sizing: border-box;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: chartreuse;
+}
+.field{
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.field input, .field select{
+  width: 200px;
+}
+.accounts-per-page-container{
+  display: block;
+  box-sizing: content-box;
+  margin-bottom: 12px;
+}
+.edit{
+  background-color: chartreuse;
+}
+.delete{
+  background-color: brown;
+}
+.save{
+  background-color: blue;
+}

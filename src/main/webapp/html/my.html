@@ -3,10 +3,109 @@
     <title>RPG</title>
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <link href="/css/my.css" rel="stylesheet">
+    <script defer type="text/javascript" src="html/script.js"></script>
 </head>
 <body>
 <h1>RPG admin panel</h1>
 <h2>Accounts list:</h2>
+<!--Dropdown list which are changing the user's count per page-->
+<div class="accounts-per-page-container">
+    <label for="count-per-page"> Count per page</label>
+    <select name="Choose count of users " id="count-per-page" onchange="updateByDropdownList()" >
+        <option value="3">3</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+    </select>
+</div>
+<!--User's table-->
+<table class="users-table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Race</th>
+        <th>Profession</th>
+        <th>Level</th>
+        <th>Birthday</th>
+        <th>Banned</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody class="users-table-body">
+
+    </tbody>
+</table>
+<!--Pagination-->
+<div class="button-container">
+    <span>Pages:</span>
+    <div class="page-buttons"><span class="page-button"></span></div>
+</div>
+<!--Creating new account-->
+<div class="creating-account-container">
+    <h3>Create new account:</h3>
+    <div class="field">
+        <label for="name">Name:&nbsp;</label>
+        <input type="text" id="name">
+    </div>
+
+    <div class="field">
+        <label for="title">Title:&nbsp;</label>
+        <input type="text" id="title">
+    </div>
+
+    <div class="field">
+        <label for="race">Race:&nbsp;</label>
+        <select name="race" id="race" >
+            <option value="HUMAN">HUMAN</option>
+            <option value="DWARF">DWARF</option>
+            <option value="ELF">ELF</option>
+            <option value="GIANT">GIANT</option>
+            <option value="ORC">ORC</option>
+            <option value="TROLL">TROLL</option>
+            <option value="HOBBIT">HOBBIT</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label for="profession" >Profession:&nbsp;</label>
+        <select name="profession" id="profession">
+            <option value="WARRIOR">WARRIOR</option>
+            <option value="ROGUE">ROGUE</option>
+            <option value="SORCERER">SORCERER</option>
+            <option value="CLERIC">CLERIC</option>
+            <option value="PALADIN">PALADIN</option>
+            <option value="NAZGUL">NAZGUL</option>
+            <option value="WARLOCK">WARLOCK</option>
+            <option value="DRUID">DRUID</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label for="level" >Level:&nbsp;</label>
+        <input type="number" name="level" id="level">
+    </div>
+    
+    <div class="field">
+        <label for="birthday">Birthday:&nbsp;</label>
+        <input type="date" name="birthday" id="birthday">
+    </div>
+
+    <div class="field">
+        <label for="banned" >Banned:&nbsp;</label>
+        <select name="banned" id="banned">
+            <option value="false">false</option>
+            <option value="true">true</option>
+        </select>
+    </div>
+
+    <div class="field ">
+        <button class="save" type="button" onclick="addingNewUser()">
+            <img src="img/save.png" alt="save">
+        </button></div>
+    </div>
 
 </body>
 </html>
